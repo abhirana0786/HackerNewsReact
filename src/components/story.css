@@ -1,0 +1,31 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+table{border: 0;padding: 0;margin: 0;}
+table thead tr{background-color: #ff742b;color: #fff;}
+table tbody tr:nth-child(even) {background: #F1F1EC}
+table tbody tr:nth-child(odd) {background: #E5E5DF}
+table thead tr th:last-child{text-align: left;}
+table tbody tr{color:#000;}
+table tbody tr td{text-align:center;}
+table tbody tr td:last-child{text-align: left; color: #696969;}
+table tbody tr td:last-child span{font-size: 10px;}
+table thead tr th,table tbody tr td{padding: 2px;}
+.counticon{width: 15px;height: 15px;}
+.pointer{cursor: pointer;}
+.hnuser,.hidebtn{ font-size: 10px;color: #000;text-decoration: none;}
+.storylink{color: #000;text-decoration: none;}
+.siteurl{
+    color: #828282;
+    font-size: 13px;
+    word-break: break-all;
+}
+.pagination{float: right;padding: 10px;color: #ff742b;}
+.pagination a{color: #ff742b;}
