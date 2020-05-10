@@ -2,7 +2,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
-
 .container{
     width: 60%;
     margin: 0 auto;
@@ -18,16 +17,12 @@ table tbody tr td{text-align:center;}
 table tbody tr td:last-child{text-align: left; color: #696969;}
 table tbody tr td:last-child span{font-size: 10px;}
 table thead tr th,table tbody tr td{padding: 2px;}
-.counticon{width: 10px;height: 10px;}
+.counticon{width: 10px;height: 10px;border: 0px;margin: 3px 2px 6px;}
 .pointer{cursor: pointer;}
 .hnuser,.hidebtn{ font-size: 10px;color: #000;text-decoration: none;}
 .storylink{color: #000;text-decoration: none;}
 .storylink:visited{color:#828282}
-.siteurl{
-    color: #828282;
-    font-size: 13px;
-    word-break: break-all;
-}
+.siteurl{color: #828282;font-size: 13px;word-break: break-all;}
 .pagination{float: right;padding: 10px;color: #ff742b;}
 .pagination a{color: #ff742b;}
 .chart-view{

@@ -8,11 +8,6 @@ import * as moment from 'moment';
 import SplineChart from './chart';
 
 const StoryComponent = () => {
-    // const [count, setCount] = useState(0);
-    // const countUp = () => {
-    //     setCount(count + 1);
-    //     console.log(count);
-    // }
 
     const [storyData, setStoryData] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
@@ -85,14 +80,12 @@ const StoryComponent = () => {
 
                         let domain = data && data.url && data.url.split("//")[1];
                         let mainurl = domain && domain.split("/")[0];
-                        console.log(hideOldData);
+                        //console.log(hideOldData);
                         if (!hideOldData) {
-
-
                             return <tr key={index}>
                                 <td>{data.num_comments}</td>
                                 <td> {upVote && upVote.id && upVote.id === data.objectID ? upVote.points : (oldData && oldData.points) ? oldData.points : data.points}</td>
-                                <td><img onClick={() => addCount(data)} className="counticon pointer" src="/arrow.svg" alt="" /></td>
+                                <td><img onClick={() => addCount(data)} className="counticon pointer" src="/grayarrow2x.gif" alt="" /></td>
                                 <td><a href={data.url} className="storylink">{data.title}</a> <span className="siteurl">({mainurl})</span> <span>by</span> <a href={`user?id=${data.author}`} className="hnuser">{data.author}</a> <span className="time">{moment(data.created_at).fromNow()}</span> <span>[<a onClick={() => hideStory(data.objectID)} className="hidebtn pointer"> Hide </a>]</span></td>
                             </tr>
                         }

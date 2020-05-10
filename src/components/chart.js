@@ -4,8 +4,6 @@ import CanvasJSReact from '../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const SplineChart = (props) => {
-
-
     const chartData = [];
     props.data && props.data.hits && props.data.hits.map((data, index) => {
         let masterData = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
