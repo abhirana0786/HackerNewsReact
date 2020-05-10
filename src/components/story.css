@@ -29,3 +29,9 @@ table thead tr th,table tbody tr td{padding: 2px;}
 }
 .pagination{float: right;padding: 10px;color: #ff742b;}
 .pagination a{color: #ff742b;}
+.chart-view{
+    margin-top: 40px;
+    border-top: 2px solid #ff742b;
+    border-bottom: 2px solid #ff742b;
+    padding: 10px 0px;
+}

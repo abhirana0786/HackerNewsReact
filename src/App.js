@@ -2,7 +2,9 @@ import React from 'react';
 import StoryComponent from './components/story';
 function App() {
   return (
-    <StoryComponent />
+    <React.Fragment>
+      <StoryComponent />
+    </React.Fragment>
   );
 }
 

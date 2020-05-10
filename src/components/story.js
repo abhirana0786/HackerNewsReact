@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './story.css';
 import { getStoryData } from '../services/hnApi';
 import * as moment from 'moment';
+import SplineChart from './chart';
 
 const StoryComponent = () => {
     // const [count, setCount] = useState(0);
@@ -54,7 +55,11 @@ const StoryComponent = () => {
         localStorage.setItem('data', JSON.stringify(masterData));
     }
 
-
+    const hideStory = (id) => {
+        const isNotId = item => item.objectID !== id;
+        const updatedData = storyData.hits.filter(isNotId);
+        return updatedData;
+    }
 
     return (
         <div className="container">
@@ -79,14 +84,16 @@ const StoryComponent = () => {
                             <td>{data.num_comments}</td>
                             <td> {upVote && upVote.id && upVote.id === data.objectID ? upVote.points : data.points}</td>
                             <td><img onClick={() => addCount(data)} className="counticon pointer" src="/arrow.svg" alt="" /></td>
-                            <td><a href="" className="storylink">{data.title}</a> <span className="siteurl">({data.url})</span> <span>by</span> <a href={`user?id={data.author}`} className="hnuser">{data.author}</a> <span className="time">{moment(data.created_at).fromNow()}</span> <span>[<a href="" className="hidebtn"> Hide </a>]</span></td>
+                            <td><a href="" className="storylink">{data.title}</a> <span className="siteurl">({data.url})</span> <span>by</span> <a href={`user?id={data.author}`} className="hnuser">{data.author}</a> <span className="time">{moment(data.created_at).fromNow()}</span> <span>[<a onClick={hideStory} className="hidebtn pointer"> Hide </a>]</span></td>
                         </tr>
 
                     })}
                 </tbody>
             </table>
             <div className="pagination"><a className="pointer" onClick={prevPage}>Previous</a> | <a className="pointer" onClick={nextPage}>Next</a></div>
-            <div className="chart-view"></div>
+            <div className="chart-view">
+                <SplineChart />
+            </div>
         </div>
     )
 }
