@@ -56,8 +56,7 @@ const StoryComponent = () => {
     }
 
     const hideStory = (id) => {
-        const isNotId = item => item.objectID !== id;
-        const updatedData = storyData.hits.filter(isNotId);
+        const updatedData = storyData.hits.filter((item) => { return item.objectID !== id });
         return updatedData;
     }
 
@@ -87,7 +86,7 @@ const StoryComponent = () => {
                             <td>{data.num_comments}</td>
                             <td> {upVote && upVote.id && upVote.id === data.objectID ? upVote.points : data.points}</td>
                             <td><img onClick={() => addCount(data)} className="counticon pointer" src="/arrow.svg" alt="" /></td>
-                            <td><a href={data.url} className="storylink">{data.title}</a> <span className="siteurl">({mainurl})</span> <span>by</span> <a href={`user?id=${data.author}`} className="hnuser">{data.author}</a> <span className="time">{moment(data.created_at).fromNow()}</span> <span>[<a onClick={hideStory} className="hidebtn pointer"> Hide </a>]</span></td>
+                            <td><a href={data.url} className="storylink">{data.title}</a> <span className="siteurl">({mainurl})</span> <span>by</span> <a href={`user?id=${data.author}`} className="hnuser">{data.author}</a> <span className="time">{moment(data.created_at).fromNow()}</span> <span>[<a onClick={() => hideStory(data.objectID)} className="hidebtn pointer"> Hide </a>]</span></td>
                         </tr>
 
                     })}
