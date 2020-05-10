@@ -55,6 +55,7 @@ const StoryComponent = () => {
     }
 
 
+
     return (
         <div className="container">
             <table width="100%" border="0" cellPadding="0" cellSpacing="0">
@@ -84,7 +85,7 @@ const StoryComponent = () => {
                     })}
                 </tbody>
             </table>
-            <div className="pagination"><a onClick={prevPage}>Previous</a> | <a onClick={nextPage}>Next</a></div>
+            <div className="pagination"><a className="pointer" onClick={prevPage}>Previous</a> | <a className="pointer" onClick={nextPage}>Next</a></div>
             <div className="chart-view"></div>
         </div>
     )
