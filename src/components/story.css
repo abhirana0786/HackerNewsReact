@@ -18,7 +18,7 @@ table tbody tr td{text-align:center;}
 table tbody tr td:last-child{text-align: left; color: #696969;}
 table tbody tr td:last-child span{font-size: 10px;}
 table thead tr th,table tbody tr td{padding: 2px;}
-.counticon{width: 15px;height: 15px;}
+.counticon{width: 10px;height: 10px;}
 .pointer{cursor: pointer;}
 .hnuser,.hidebtn{ font-size: 10px;color: #000;text-decoration: none;}
 .storylink{color: #000;text-decoration: none;}
