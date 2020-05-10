@@ -80,11 +80,14 @@ const StoryComponent = () => {
                         <td>Lorem Ispsums</td>
                     </tr> */}
                     {storyData && storyData.hits && storyData.hits.map((data, index) => {
+                        let domain = data.url.split("//")[1];
+                        let mainurl = domain.split("/")[0];
+
                         return <tr key={index}>
                             <td>{data.num_comments}</td>
                             <td> {upVote && upVote.id && upVote.id === data.objectID ? upVote.points : data.points}</td>
                             <td><img onClick={() => addCount(data)} className="counticon pointer" src="/arrow.svg" alt="" /></td>
-                            <td><a href="" className="storylink">{data.title}</a> <span className="siteurl">({data.url})</span> <span>by</span> <a href={`user?id={data.author}`} className="hnuser">{data.author}</a> <span className="time">{moment(data.created_at).fromNow()}</span> <span>[<a onClick={hideStory} className="hidebtn pointer"> Hide </a>]</span></td>
+                            <td><a href={data.url} className="storylink">{data.title}</a> <span className="siteurl">({mainurl})</span> <span>by</span> <a href={`user?id=${data.author}`} className="hnuser">{data.author}</a> <span className="time">{moment(data.created_at).fromNow()}</span> <span>[<a onClick={hideStory} className="hidebtn pointer"> Hide </a>]</span></td>
                         </tr>
 
                     })}
