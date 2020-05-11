@@ -3,9 +3,9 @@
 // eslint-disable-next-line
 import React, { useState, useEffect } from 'react';
 import './story.css';
-import { getStoryData } from '../services/hnApi';
+import { getStoryData } from '../../services/hnApi';
 import * as moment from 'moment';
-import SplineChart from './chart';
+import SplineChart from '../chart/chart';
 
 const StoryComponent = () => {
 
@@ -60,7 +60,7 @@ const StoryComponent = () => {
 
     return (
         <div className="container">
-            <table width="100%" border="0" cellPadding="0" cellSpacing="0">
+            <table id="storyTable" width="100%" border="0" cellPadding="0" cellSpacing="0">
                 <thead>
                     <tr>
                         <th>Comments</th>

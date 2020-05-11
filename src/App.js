@@ -1,5 +1,6 @@
 import React from 'react';
-import StoryComponent from './components/story';
+import StoryComponent from './components/story/story';
+
 function App() {
   return (
     <React.Fragment>

@@ -1,7 +1,8 @@
 /* eslint-disable array-callback-return */
 import React from 'react';
-import CanvasJSReact from '../assets/canvasjs.react';
+import CanvasJSReact from '../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
 
 const SplineChart = (props) => {
     const chartData = [];

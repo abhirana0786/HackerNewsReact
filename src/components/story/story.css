@@ -24,7 +24,7 @@ table thead tr th,table tbody tr td{padding: 2px;}
 .storylink:visited{color:#828282}
 .siteurl{color: #828282;font-size: 13px;word-break: break-all;}
 .pagination{float: right;padding: 10px;color: #ff742b;}
-.pagination a{color: #ff742b;}
+.pagination a{color: #ff742b;font-weight: 700;}
 .chart-view{
     margin-top: 40px;
     border-top: 2px solid #ff742b;

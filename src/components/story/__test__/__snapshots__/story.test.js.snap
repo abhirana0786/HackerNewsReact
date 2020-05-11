@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <table
+    border="0"
+    cellPadding="0"
+    cellSpacing="0"
+    id="storyTable"
+    width="100%"
+  >
+    <thead>
+      <tr>
+        <th>
+          Comments
+        </th>
+        <th>
+          Vote Count
+        </th>
+        <th>
+          UpVote
+        </th>
+        <th
+          width="80%"
+        >
+          News Details
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <div
+    className="pagination"
+  >
+    <a
+      className="pointer"
+      onClick={[Function]}
+    >
+      Previous
+    </a>
+     | 
+    <a
+      className="pointer"
+      onClick={[Function]}
+    >
+      Next
+    </a>
+  </div>
+  <div
+    className="chart-view"
+  />
+</div>
+`;
